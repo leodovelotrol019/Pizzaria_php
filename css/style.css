@@ -1,0 +1,71 @@
+@font-face {
+    font-family: roboto;
+    src: url(../index.html);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+header{
+    background-color: black;
+    color: #fff;
+    height: 100px;
+    
+}
+header h1{
+    
+    padding-top: 30px;
+}
+body{
+     
+  
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#container{
+width: 1000px;
+margin: 40px auto;
+align-items: center;
+padding: 20px; 
+margin-top: 40px;
+}
+.formulario{
+width: 100%;
+
+color: #000000;
+}
+.formulario div{
+    display: flex;
+    flex-direction: column; 
+    
+
+}
+#form-grid input{
+    width: 500px;
+    border-style: none black;
+    border-color:
+}
+#form-grid select{
+    width: 500px;
+    
+    
+}
+.btn{
+width: 85px;
+height: 30px;
+background-color: green;
+margin-top: 20px;
+border-style: none;
+color: #fff;    
+border-radius: 3px;
+}
