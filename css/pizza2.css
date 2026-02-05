@@ -10,7 +10,7 @@ header{
 body{
     margin: 0;
 }
-input,select{
+input[type="text"],input[type="number"],select{
     width: 100% ;
     padding: 8px 12px;
 }
@@ -24,4 +24,14 @@ main{
 width: 80%;
 margin: 20px auto;
 
+}
+input[type="submit"]{
+padding: 8px 12px;
+margin-top: 20px;
+background-color: #0b7c36;
+color: #fff;
+font-weight: bold;
+text-transform: uppercase;
+border: none;
+border-radius: 4px;
 }

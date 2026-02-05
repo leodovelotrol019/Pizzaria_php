@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Pizzaria do Bom</title>
 </head>
 
@@ -14,12 +14,12 @@
     </header>
     <main>
         <div id="container">
-            <form class="formulario" action="">
+            <form class="formulario" action="../backend/cadastrar.php" method="post">
                 <div id="form-grid">
                     <div>
 
                         <label for="Sabor"> Sabor</label>
-                        <input type="text" name="Sabor" id="Sabor">
+                        <input type="text" name="Sabor" id="Sabor" required>
 
 
                     </div>
@@ -27,15 +27,15 @@
                     <div>
 
                         <label for="Ingrediente">Ingrediente</label>
-                        <input type="text" name="Ingrediente" id="Ingrediente">
+                        <input type="text" name="Ingrediente" id="Ingrediente" required>
 
                     </div>
 
 
                     <div>
                         <label for="Tamanho">Tamanho</label>
-                        <select name="Tamanho" id="Tamanho">
-                            <option value="">Selecione o Tamanho</option>
+                        <select name="Tamanho" id="Tamanho" required>
+                            <option value="" selected disabled>Selecione o Tamanho</option>
                             <option value="P">P</option>
                             <option value="M">M</option>
                             <option value="G">G</option>
@@ -47,13 +47,13 @@
 
                     <div>
                         <label for="Valor">Valor</label>
-                        <input type="text" name="Valor" id="Valor">
+                        <input type="number" name="Valor" id="Valor" required step="0.01" min="1" >
 
                     </div>
 
 
                 </div>
-                <input type="button" value="CADASTRAR" class="btn">
+                <input type="submit" value="CADASTRAR" class="btn">
 
 
             </form>

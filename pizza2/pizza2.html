@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria - Cadstro</title>
-    <link rel="stylesheet" href="css/pizza2.css">
+    <link rel="stylesheet" href="../css/pizza2.css">
 </head>
 
 <body>
@@ -17,17 +17,17 @@
             <div id="grid">
                 <div>
                     <label for="Sabor">Sabor</label>
-                    <input type="text" name="Sabor" id="Sabor">
+                    <input type="text" name="Sabor" id="Sabor" required>
                 </div>
 
                 <div>
                     <label for="Ingrediente">Ingrediente</label>
-                    <input type="text" name="Ingrediente" id="Ingrediente">
+                    <input type="text" name="Ingrediente" id="Ingrediente" required>
                 </div>
 
                 <div>
                     <label for="Tamanho">Tamanho</label>
-                    <select name="Tamanho" id="Tamanho">
+                    <select name="Tamanho" id="Tamanho" required>
                         <option value="">Selecione</option>
                         <option value="P">P</option>
                         <option value="G">G</option>
@@ -36,10 +36,11 @@
 
                 <div>
                     <label for="Valor">Valor</label>
-                    <input type="number" name="Valor" id="Valor">
+                    <input type="number" name="Valor" id="Valor" required>
                 </div>
-                <input type="button" value="CADASTRAR">
+               
             </div>
+             <input type="submit" value="CADASTRAR">
         </form>
     </main>
 </body>
