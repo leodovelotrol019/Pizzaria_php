@@ -91,6 +91,12 @@ table{
     width: 100% ;
 }
 
-
+.btn-dell{
+    text-decoration: none;
+    background: rgb(248, 61, 61);
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
 
 /* CSS da Tabela */

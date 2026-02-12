@@ -43,6 +43,7 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
         <th>NOME</th>
         <th>E-MAIl</th>
         <th>TELEFONE</th>
+        <th>Ações</th>
     </tr>
     <?php foreach ($funcionarios as $funcionario):?>
     <tr>
@@ -50,6 +51,7 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
         <td><?php echo $funcionario ['nome'];?></td>
         <td><?php echo $funcionario ['email'];?></td>
         <td><?php echo $funcionario ['telefone'];?></td>
+        <td><a class="btn-dell" href="backend/deletar.php?id=">DELETAR</a></td>
     </tr>
     <?php endforeach; ?>
 </table>

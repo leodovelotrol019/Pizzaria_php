@@ -15,7 +15,7 @@ $conexao->setATTribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOExeption $erro){
     echo"Erro ao conectar no banco de dados ".$erro;
 }
-$sql = "select * from tb_funcionario";
+$sql = "select * from tb_pizza";
 $comando = $conexao->prepare($sql);
 $comando->execute();
 $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
@@ -47,15 +47,16 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
                         id
                     </th>
                     <th>
-                        Sabor
+                        sabor
                     </th>
                     <th>
-                        Ingrediente
+                        ingrediente
                     </th>
                     <th>
-                        Tamanho
+                        tamanho
                     </th>
-                    <th>Valor</th>
+                    <th>valor</th>
+                    <th>Ações</th>
                 </tr>
                 <?php
                 foreach ($pizzas as $pizza):
@@ -67,6 +68,7 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
     <td><?php echo $pizza ['ingrediente'];?></td>
     <td><?php echo $pizza ['tamanho'];?></td>
     <td><?php echo $pizza ['valor'];?></td>
+    <td><a class="btn-deletar" href="backend/deletar.php?id=">DELETAR</a></td>
 </tr>                    
 <?php endforeach;?>
 
