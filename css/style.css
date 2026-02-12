@@ -22,7 +22,7 @@ header h1{
 }
 body{
      
-  
+  background: gray;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -52,16 +52,17 @@ color: #000000;
 }
 #form-grid input{
      width: 500px;
-    border: solid greenyellow 2px;
+    border: solid rgb(24, 41, 0) 2px;
     height: 35px;
     border-radius: 3px;
+    background-color:  rgb(65, 65, 65) ;
 }
 #form-grid select{
     width: 500px;
-    border: solid greenyellow 2px;
+    border: solid rgb(24, 41, 0) 2px;
     height: 35px;
     border-radius: 3px;
-    
+    background-color:  rgb(65, 65, 65) ;
 }
 .btn{
 width: 85px;
@@ -72,3 +73,24 @@ border-style: none;
 color: #fff;    
 border-radius: 3px;
 }
+
+/* CSS da Tabela */
+
+th,td{
+border: 1px solid black;
+padding: 5px;
+
+}
+th{
+background: rgb(30, 42, 51);
+color: #fff;
+padding: 10px 2px;
+}
+table{
+    border-collapse: collapse;
+    width: 100% ;
+}
+
+
+
+/* CSS da Tabela */
