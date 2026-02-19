@@ -51,7 +51,8 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
         <td><?php echo $funcionario ['nome'];?></td>
         <td><?php echo $funcionario ['email'];?></td>
         <td><?php echo $funcionario ['telefone'];?></td>
-        <td><a class="btn-dell" href="deletar-funcionario.php?id=<?php echo $funcionario ['id'];?>">DELETAR</a></td>
+        <td><a class="btn-dell" href="deletar-funcionario.php?id=<?php echo $funcionario ['id'];?>">DELETAR</a>
+    <a class="btn-edit" href="editar-funcionario.php?id=<?php echo $pizza ['id'];?>">EDITAR</a></td>
     </tr>
     <?php endforeach; ?>
 </table>

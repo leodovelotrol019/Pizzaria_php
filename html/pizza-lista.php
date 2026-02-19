@@ -68,7 +68,8 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
     <td><?php echo $pizza ['ingrediente'];?></td>
     <td><?php echo $pizza ['tamanho'];?></td>
     <td><?php echo $pizza ['valor'];?></td>
-    <td><a class="btn-dell" href="../backend/deletar-pizza.php?id=<?php echo $pizza ['id'];?>">DELETAR</a></td>
+    <td><a class="btn-dell" href="../backend/deletar-pizza.php?id=<?php echo $pizza ['id'];?>">DELETAR</a>
+    <a class="btn-edit" href="editar-pizza.php?id=<?php echo $pizza ['id'];?>">EDITAR</a></td>
 </tr>                    
 <?php endforeach;?>
 

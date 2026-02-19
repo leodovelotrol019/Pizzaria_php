@@ -54,6 +54,7 @@ $fornecedores = $comando ->fetchALL(PDO::FETCH_ASSOC);
         <td><?php echo $fornecedor ['telefone'];?></td>
         <td><?php echo $fornecedor ['produto'];?></td>
         <td><a class="btn-dell" href="deletar-fornecedor.php?id=<?php echo $fornecedor ['id'];?>">DELETAR</a></td>
+        
     </tr>
     <?php endforeach; ?>
 </table>

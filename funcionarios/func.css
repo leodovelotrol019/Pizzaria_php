@@ -69,3 +69,10 @@ border-style: none;
 color: #fff;    
 border-radius: 3px;
 }
+.btn-edit{
+    text-decoration: none;
+    background: rgb(9, 73, 0);
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
