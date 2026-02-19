@@ -1,4 +1,4 @@
-    <?php
+   <?php
 //conexao do PHP com o banco de dados MYSQL
  define('SERVIDOR','localhost' );
  define('USUARIO','root');
@@ -15,10 +15,10 @@ $conexao->setATTribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOExeption $erro){
     echo"Erro ao conectar no banco de dados ".$erro;
 }
-$sql = "select * from tb_funcionario";
+$sql = "select * from tb_fornecedor";
 $comando = $conexao->prepare($sql);
 $comando->execute();
-$funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
+$fornecedores = $comando ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,12 +26,12 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>LISTA DE FUNCIONARIOS</title>
+    <title>LISTA DE FORNECEDORES</title>
 </head>
 <body>
    <header>
     <h1>
-        LISTA DE FUNCIONARIOS
+        LISTA DE FORNECEDORES
     </h1>
    </header>
 
@@ -43,15 +43,17 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
         <th>NOME</th>
         <th>E-MAIl</th>
         <th>TELEFONE</th>
+        <th>PRODUTO</th>
         <th>Ações</th>
     </tr>
-    <?php foreach ($funcionarios as $funcionario):?>
+    <?php foreach ($fornecedores as $fornecedor):?>
     <tr>
-        <td><?php echo $funcionario ['id'];?></td>
-        <td><?php echo $funcionario ['nome'];?></td>
-        <td><?php echo $funcionario ['email'];?></td>
-        <td><?php echo $funcionario ['telefone'];?></td>
-        <td><a class="btn-dell" href="deletar-funcionario.php?id=<?php echo $funcionario ['id'];?>">DELETAR</a></td>
+        <td><?php echo $fornecedor ['id'];?></td>
+        <td><?php echo $fornecedor ['nome'];?></td>
+        <td><?php echo $fornecedor ['email'];?></td>
+        <td><?php echo $fornecedor ['telefone'];?></td>
+        <td><?php echo $fornecedor ['produto'];?></td>
+        <td><a class="btn-dell" href="deletar-fornecedor.php?id=<?php echo $fornecedor ['id'];?>">DELETAR</a></td>
     </tr>
     <?php endforeach; ?>
 </table>
@@ -60,20 +62,3 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
    </main>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
