@@ -60,7 +60,7 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
     </header>
     <main>
         <div id="container">
-            <form class="formulario" action="../backend/atualizar-pizza.php" method="post">
+            <form class="formulario" action="../backend/atualizar-pizza.php?id=<?php echo $pizzas[0] ['id'];?>" method="post">
                 <div id="form-grid">
                     <div>
 

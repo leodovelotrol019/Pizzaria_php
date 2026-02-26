@@ -41,7 +41,7 @@ $funcionarios = $comando ->fetchALL(PDO::FETCH_ASSOC);
     </header>
     <main>
         <div id="container">
-            <form class="formulario" action="func.php" method="post">
+            <form class="formulario" action="../backend/atualizar-funcionario.php?id=<?php echo $funcionarios[0] ['id'];?>" method="post">
                 <div id="form-grid">
                     <div>
 
