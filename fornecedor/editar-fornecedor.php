@@ -17,32 +17,13 @@ $conexao->setATTribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }
 
 $id = $_GET['id'];
-$sql = "select * from tb_fornecedor where id = $id";
+$sql = "select * from tb_fornecedor";
 $comando = $conexao->prepare($sql);
 $comando->execute();
-$pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
+$fornecedor = $comando->fetchALL(PDO::FETCH_ASSOC);
 // echo"<pre>";
 // var_dump($pizzas);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -50,56 +31,48 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Pizzaria do Bom</title>
+    <link rel="stylesheet" href="../funcionarios/func.css">
+    <title>fornecedor - EDIT</title>
 </head>
 
 <body>
     <header>
-        <h1>Pizzaria - EDITAR</h1>
+        <h1>fornecedor - EDIT</h1>
     </header>
     <main>
         <div id="container">
-            <form class="formulario" action="../backend/atualizar-pizza.php" method="post">
+            <form class="formulario" action="../backend/atualizar-fornecedor.php?id=<?php echo $fornecedor[0] ['id'];?>" method="post">
                 <div id="form-grid">
                     <div>
 
-                        <label for="Sabor"> Sabor</label>
-                        <input value="<?php echo $pizzas[0] ['sabor'];?>" type="text" name="Sabor" id="Sabor" required>
+                        <label for="Nome"> Nome</label>
+                        <input value="<?php echo $fornecedor[0] ['nome'];?>" type="text" name="nome" id="nome" required>
 
 
                     </div>
 
                     <div>
 
-                        <label for="Ingrediente">Ingrediente</label>
-                        <input value="<?php echo $pizzas[0] ['ingrediente'];?>" type="text" name="Ingrediente" id="Ingrediente" required>
+                        <label for="E-mail">E-mail</label>
+                        <input value="<?php echo $fornecedor[0] ['email'];?>" type="email" name="email" id="email" required>
 
                     </div>
 
 
                     <div>
-                        <label for="Tamanho">Tamanho</label>
-                        <select name="Tamanho" id="Tamanho" required>
-                            
-                            <option value="<?php if($pizzas[0] ['tamanho']=='P') echo 'selected' ?>">P</option>
-                            <option value=""<?php if($pizzas[0] ['tamanho']=='M') echo 'selected' ?>"">M</option>
-                            <option value=""<?php if($pizzas[0] ['tamanho']=='G') echo 'selected' ?>"">G</option>
-
-
-                        </select>
+                        <label for="Telefone">Telefone</label>
+                        <input value="<?php echo $fornecedor[0] ['telefone'];?>" type="text" name="telefone" id="telefone" required  >
 
                     </div>
-
                     <div>
-                        <label for="Valor">Valor</label>
-                        <input value="<?php echo $pizzas[0] ['valor'];?>" type="number" name="Valor" id="Valor" required step="0.01" min="1" >
+                        <label for="produto">produto</label>
+                        <input value="<?php echo $fornecedor[0] ['produto'];?>" type="text" name="produto" id="produto" required  >
 
                     </div>
 
 
                 </div>
-                <input type="submit" value="SALVAR" class="btn">
+                <input type="submit" value="EDITAR" class="btn">
 
 
             </form>
@@ -108,3 +81,20 @@ $pizzas = $comando->fetchALL(PDO::FETCH_ASSOC);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
